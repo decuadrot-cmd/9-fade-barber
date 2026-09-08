@@ -4,16 +4,60 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>9 Fade Barber | José Pedro Varela</title>
 <style>
-*{box-sizing:border-box}body{margin:0;background:#08080b;color:#fff;font-family:Arial,sans-serif}a{color:inherit}.wrap{max-width:1100px;margin:auto;padding:28px}.hero{min-height:80vh;display:flex;flex-direction:column;justify-content:center}.tag{color:#a855f7;font-weight:800;letter-spacing:2px}.hero h1{font-size:clamp(42px,8vw,90px);line-height:.92;margin:18px 0}.hero p{font-size:20px;color:#bbb;max-width:650px}.btn{display:inline-block;background:#8b3dff;padding:15px 22px;border-radius:10px;text-decoration:none;font-weight:800;margin:8px 8px 8px 0}.btn.alt{background:#19191f}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.card{background:#121217;border:1px solid #25252d;border-radius:16px;padding:22px}.price{font-size:28px;font-weight:900;color:#b56cff}.gallery img{width:100%;height:330px;object-fit:cover;border-radius:14px}.section{padding:70px 0}.section h2{font-size:38px;margin-bottom:25px}.muted{color:#aaa}.steps{font-weight:800;font-size:22px}.footer{text-align:center;padding:50px 0;color:#777}header{position:fixed;top:0;left:0;right:0;background:#08080bcc;backdrop-filter:blur(10px);z-index:5;border-bottom:1px solid #202027}nav{max-width:1100px;margin:auto;padding:16px 28px;display:flex;justify-content:space-between;align-items:center}nav strong{font-size:22px}nav span{color:#b56cff}.hours{border-left:3px solid #8b3dff;padding-left:16px}
+*{box-sizing:border-box}body{margin:0;background:#08080b;color:#fff;font-family:Arial,sans-serif}a{color:inherit}.wrap{max-width:1100px;margin:auto;padding:28px}.hero{min-height:80vh;display:flex;flex-direction:column;justify-content:center}.tag{color:#a855f7;font-weight:800;letter-spacing:2px}.hero h1{font-size:clamp(42px,8vw,90px);line-height:.92;margin:18px 0}.hero p{font-size:20px;color:#bbb;max-width:650px}.btn{display:inline-block;background:#8b3dff;padding:15px 22px;border-radius:10px;text-decoration:none;font-weight:800;margin:8px 8px 8px 0}.btn.alt{background:#19191f}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.card{background:#121217;border:1px solid #25252d;border-radius:16px;padding:22px}.price{font-size:28px;font-weight:900;color:#b56cff}.gallery img{width:100%;height:330px;object-fit:cover;border-radius:14px;display:block}.gallery-card{overflow:hidden;background:#121217;border:1px solid #25252d;border-radius:16px}.gallery-card img{height:330px;border-radius:0}.gallery-title{padding:14px 16px;font-weight:800}.section{padding:70px 0}.section h2{font-size:38px;margin-bottom:25px}.muted{color:#aaa}.steps{font-weight:800;font-size:22px}.footer{text-align:center;padding:50px 0;color:#777}header{position:fixed;top:0;left:0;right:0;background:#08080bcc;backdrop-filter:blur(10px);z-index:5;border-bottom:1px solid #202027}nav{max-width:1100px;margin:auto;padding:16px 28px;display:flex;justify-content:space-between;align-items:center}nav strong{font-size:22px}nav span{color:#b56cff}.hours{border-left:3px solid #8b3dff;padding-left:16px}.loading{color:#888;padding:20px 0}.empty{color:#888;border:1px dashed #333;padding:25px;border-radius:14px}.error{color:#ff7777}
 </style></head>
 <body>
-<header><nav><strong>9 <span>FADE</span> BARBER</strong><a href="https://www.instagram.com/taibo_andres/" target="_blank">Instagram</a></nav></header>
+<header><nav><strong>9 <span>FADE</span> BARBER</strong><a id="navInstagram" href="https://www.instagram.com/taibo_andres/" target="_blank">Instagram</a></nav></header>
 <main class="wrap">
-<section class="hero"><div class="tag">JOSÉ PEDRO VARELA · URUGUAY</div><h1>SIN AGENDA.<br>VENÍ CUANDO QUIERAS.</h1><p>Tu corte, sin vueltas. Atención por orden de llegada. Vení, sentate y salí fresco.</p><div><a class="btn" href="#cortes">VER CORTES</a><a class="btn alt" href="https://maps.app.goo.gl/AGDyQBFVYC2GXukG8" target="_blank">CÓMO LLEGAR</a></div><p class="hours"><b>Lun–Jue:</b> 08:30–20:00<br><b>Vie–Sáb:</b> 08:30–21:00</p></section>
+<section class="hero"><div class="tag">JOSÉ PEDRO VARELA · URUGUAY</div><h1>SIN AGENDA.<br>VENÍ CUANDO QUIERAS.</h1><p>Tu corte, sin vueltas. Atención por orden de llegada. Vení, sentate y salí fresco.</p><div><a class="btn" href="#cortes">VER CORTES</a><a id="heroMaps" class="btn alt" href="https://maps.app.goo.gl/AGDyQBFVYC2GXukG8" target="_blank">CÓMO LLEGAR</a></div><p class="hours" id="hours"><b>Lun–Jue:</b> 08:30–20:00<br><b>Vie–Sáb:</b> 08:30–21:00</p></section>
 <section class="section"><h2>ASÍ DE SIMPLE.</h2><div class="grid"><div class="card steps">01 · VENÍ</div><div class="card steps">02 · ESPERÁ</div><div class="card steps">03 · SENTATE</div><div class="card steps">04 · SALÍ FRESCO</div></div></section>
-<section class="section" id="cortes"><h2>SERVICIOS</h2><div class="grid"><div class="card"><b>Corte clásico</b><div class="price">$200</div></div><div class="card"><b>Corte + degradado</b><div class="price">$300</div></div><div class="card"><b>Corte + barba</b><div class="price">$250</div></div><div class="card"><b>Degradado + barba</b><div class="price">$400</div></div><div class="card"><b>Arreglo de barba</b><div class="price">$200</div></div><div class="card"><b>Corte de niño</b><div class="price">$300</div></div><div class="card"><b>Lavado capilar</b><div class="price">$100</div></div></div></section>
-<section class="section gallery"><h2>TRABAJOS</h2><div class="grid"><img src="images/corte-01.jpg"><img src="images/corte-02.png"><img src="images/corte-03.jpg"></div></section>
-<section class="section"><h2>9 FADE BARBER</h2><p class="muted">Un espacio pensado para que puedas venir cuando quieras, sin depender de una agenda. Cortes limpios, atención cercana y un estilo que se adapta a vos.</p><a class="btn" href="https://www.instagram.com/taibo_andres/" target="_blank">VER INSTAGRAM</a></section>
-<section class="section"><h2>¿DÓNDE ESTAMOS?</h2><p class="muted">José Pedro Varela, Uruguay</p><a class="btn" href="https://maps.app.goo.gl/AGDyQBFVYC2GXukG8" target="_blank">ABRIR EN MAPS</a></section>
+<section class="section" id="cortes"><h2>SERVICIOS</h2><div id="services" class="grid"><div class="loading">Cargando servicios...</div></div></section>
+<section class="section gallery"><h2>TRABAJOS</h2><div id="gallery" class="grid"><div class="loading">Cargando trabajos...</div></div></section>
+<section class="section"><h2>9 FADE BARBER</h2><p class="muted">Un espacio pensado para que puedas venir cuando quieras, sin depender de una agenda. Cortes limpios, atención cercana y un estilo que se adapta a vos.</p><a id="instagramBtn" class="btn" href="https://www.instagram.com/taibo_andres/" target="_blank">VER INSTAGRAM</a></section>
+<section class="section"><h2>¿DÓNDE ESTAMOS?</h2><p class="muted">José Pedro Varela, Uruguay</p><a id="mapsBtn" class="btn" href="https://maps.app.goo.gl/AGDyQBFVYC2GXukG8" target="_blank">ABRIR EN MAPS</a></section>
 </main><div class="footer">9 Fade Barber · Sin agenda · Por orden de llegada</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SB_URL='https://fsyzlonyonzszvirkhrs.supabase.co';
+const SB_KEY='sb_publishable_T1EAD9_Xv3UrQZ5ZFZiGyw_0qijwkMv';
+const sb=supabase.createClient(SB_URL,SB_KEY);
+const money=v=>'$'+Number(v||0).toLocaleString('es-UY');
+function setLink(id,url){const el=document.getElementById(id);if(el&&url)el.href=url;}
+async function loadServices(){
+ const box=document.getElementById('services');
+ const {data,error}=await sb.from('services').select('name,price').eq('active',true).order('sort_order');
+ if(error){box.innerHTML='<div class="error">No se pudieron cargar los servicios.</div>';return;}
+ if(!data?.length){box.innerHTML='<div class="empty">No hay servicios publicados.</div>';return;}
+ box.innerHTML='';
+ data.forEach(x=>{const card=document.createElement('div');card.className='card';const name=document.createElement('b');name.textContent=x.name;const price=document.createElement('div');price.className='price';price.textContent=money(x.price);card.append(name,price);box.appendChild(card);});
+}
+async function loadSchedules(){
+ const box=document.getElementById('hours');
+ const {data,error}=await sb.from('schedules').select('day,hours').order('id');
+ if(error||!data?.length)return;
+ box.innerHTML='';
+ data.forEach(x=>{const b=document.createElement('b');b.textContent=x.day+': ';box.appendChild(b);box.append(document.createTextNode(x.hours));box.appendChild(document.createElement('br'));});
+}
+async function loadGallery(){
+ const box=document.getElementById('gallery');
+ const {data,error}=await sb.from('gallery').select('title,image_url').eq('active',true).order('sort_order').order('id');
+ if(error){box.innerHTML='<div class="error">No se pudieron cargar los trabajos.</div>';return;}
+ if(!data?.length){box.innerHTML='<div class="empty">Todavía no hay trabajos publicados.</div>';return;}
+ box.innerHTML='';
+ data.forEach(x=>{
+   if(!x.image_url)return;
+   const card=document.createElement('div');card.className='gallery-card';
+   const img=document.createElement('img');img.src=x.image_url;img.alt=x.title||'Trabajo de 9 Fade Barber';img.loading='lazy';
+   img.onerror=()=>card.remove();
+   const title=document.createElement('div');title.className='gallery-title';title.textContent=x.title||'Trabajo';
+   card.append(img,title);box.appendChild(card);
+ });
+}
+async function loadSettings(){
+ const {data,error}=await sb.from('settings').select('location_url,instagram_url').limit(1).single();
+ if(error||!data)return;
+ setLink('heroMaps',data.location_url);setLink('mapsBtn',data.location_url);setLink('navInstagram',data.instagram_url);setLink('instagramBtn',data.instagram_url);
+}
+Promise.all([loadServices(),loadSchedules(),loadGallery(),loadSettings()]);
+</script>
 </body></html>
